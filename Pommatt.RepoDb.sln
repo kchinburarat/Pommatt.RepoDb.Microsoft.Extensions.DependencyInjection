@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pommatt.RepoDb.Microsoft.Extensions.DependencyInjection", "src\Pommatt.RepoDb.Microsoft.Extensions.DependencyInjection\Pommatt.RepoDb.Microsoft.Extensions.DependencyInjection.csproj", "{33CE1B12-1705-4D98-8EFF-38EE7E50E371}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pommatt.RepoDb.Microsoft.Extensions.DependencyInjection", "src\Pommatt.RepoDb.Microsoft.Extensions.DependencyInjection.csproj", "{33CE1B12-1705-4D98-8EFF-38EE7E50E371}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
