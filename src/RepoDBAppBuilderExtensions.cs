@@ -6,13 +6,19 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class RepoDBAppBuilderExtensions
     {
+        private static bool _isCallUseRepoDB = false;
         public static IApplicationBuilder UseRepoDB(this IApplicationBuilder app)
         {
-            var entityTypeConfigurations = app.ApplicationServices.GetService<IEnumerable<IEntityTypeConfiguration>>();
-            foreach (var entityTypeConfiguration in entityTypeConfigurations)
+            if (!_isCallUseRepoDB)
             {
-                entityTypeConfiguration.ConfigureHandler(app);
+                var entityTypeConfigurations = app.ApplicationServices.GetService<IEnumerable<IEntityTypeConfiguration>>();
+                foreach (var entityTypeConfiguration in entityTypeConfigurations)
+                {
+                    entityTypeConfiguration.ConfigureHandler(app);
+                }
+                _isCallUseRepoDB = true;
             }
+
             return app;
         }
     }

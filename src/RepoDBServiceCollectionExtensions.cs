@@ -1,4 +1,5 @@
-﻿using RepoDb;
+﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+using RepoDb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Microsoft.Extensions.DependencyInjection
             foreach (var item in ScanEntityConfigurationClass(assembliesToScan))
             {
                 item.Configure(services);
-                services.AddSingleton(item);
+                services.TryAddSingleton(item);
             }
             return services;
         }
